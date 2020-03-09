@@ -1,0 +1,50 @@
+.swagger-ui .topbar-wowmode .download-url-wrapper .download-url-button {
+  background: #8c1616; // Horde Falu Red
+  // background: #162c57; // Alliance Blue Zodiac; bad on dark, good on light, good as background
+}
+.swagger-ui .topbar .download-url-wrapper input[type=text] {
+  border: #8c1616; // Horde Falu Red
+  // border: #162c57; // Alliance Blue Zodiac; bad on dark, good on light, good as background
+}
+
+.swagger-ui {
+
+  $orange1: #abd473; // Operations: POST
+  .opblock.opblock-post .opblock-summary-method {background: $orange1;}
+  .opblock.opblock-post {border-color: $orange1;}
+  .opblock.opblock-post .opblock-summary  {border-color: $orange1;}
+  .opblock.opblock-post {background: lighten($orange1, 10%);}
+
+  $orange2: #c79c6e; // Operations: PUT
+  .opblock.opblock-put .opblock-summary-method {background: $orange2;}
+  .opblock.opblock-put {border-color: $orange2;}
+  .opblock.opblock-put .opblock-summary  {border-color: $orange2;}
+  .opblock.opblock-put {background: lighten($orange2, 10%);}
+
+  $orange3: #889d9d; // Operations: DELETE
+  .opblock.opblock-delete .opblock-summary-method {background: $orange3;}
+  .opblock.opblock-delete {border-color: $orange3;}
+  .opblock.opblock-delete .opblock-summary  {border-color: $orange3;}
+  .opblock.opblock-delete {background: lighten($orange3, 10%);}
+
+  $orange4: #69ccf0; // Operations: GET
+  .opblock.opblock-get .opblock-summary-method {background: $orange4;}
+  .opblock.opblock-get {border-color: $orange4;}
+  .opblock.opblock-get .opblock-summary  {border-color: $orange4;}
+  .opblock.opblock-get {background: lighten($orange4, 10%);}
+
+}
+
+.swagger-ui .btn.authorize {
+  color: #ff7d0a;
+  border-color: #ff7d0a;
+}
+.swagger-ui .btn.authorize svg {
+  fill: #ff7d0a;
+}
+
+.swagger-ui .info .title,
+.swagger-ui .opblock-tag,
+.swagger-ui .opblock-tag small {
+  color: #8c1616;
+}
