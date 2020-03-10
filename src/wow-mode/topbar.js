@@ -80,6 +80,10 @@ export default class Topbar extends React.Component {
 
       this.loadSpec(urls[targetIndex].url)
     }
+    // instantiate wowMode state
+    // note that this will be an issue if topbar is not rendered (different customization)
+    // should probably create a (visible:hidden) component that renders alongside topBar to instantiate from
+    this.props.wowModeActions.setFactionHorde()
   }
 
   onFilterChange =(e) => {
@@ -91,7 +95,8 @@ export default class Topbar extends React.Component {
     let { getComponent, specSelectors, getConfigs } = this.props
     const Button = getComponent("Button")
     const Link = getComponent("Link")
-    const WowHordeLogo = getComponent("WowHordeLogo")
+    const WowHordeLogo = getComponent("WowHordeLogo", true)
+    const WowFaction = getComponent("WowFaction", true)
 
     let isLoading = specSelectors.loadingStatus() === "loading"
     let isFailed = specSelectors.loadingStatus() === "failed"
@@ -132,6 +137,7 @@ export default class Topbar extends React.Component {
               <WowHordeLogo />
               <span className="">WoWMode</span>
             </Link>
+            <WowFaction />
             <form className="download-url-wrapper" onSubmit={formOnSubmit}>
               {control.map((el, i) => cloneElement(el, { key: i }))}
             </form>
