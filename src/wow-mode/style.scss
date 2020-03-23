@@ -1,10 +1,16 @@
-.swagger-ui .topbar-wowmode .download-url-wrapper .download-url-button {
+/* Reference colors:
   background: #8c1616; // Horde Falu Red
-  // background: #162c57; // Alliance Blue Zodiac; bad on dark, good on light, good as background
+  background: #162c57; // Alliance Blue Zodiac; bad on dark, good on light, good as background
+*/
+
+.swagger-ui .topbar-wowmode .download-url-wrapper .download-url-button {
+  background: #ff4700;
 }
 .swagger-ui .topbar .download-url-wrapper input[type=text] {
   border: #8c1616; // Horde Falu Red
-  // border: #162c57; // Alliance Blue Zodiac; bad on dark, good on light, good as background
+}
+.swagger-ui .topbar .download-url-wrapper input[type=text] {
+  width: 70%
 }
 
 .swagger-ui {
@@ -47,4 +53,24 @@
 .swagger-ui .opblock-tag,
 .swagger-ui .opblock-tag small {
   color: #8c1616;
+}
+
+.wow-mode-horde {
+    font-size: 1.5em;
+    font-weight: 700;
+    text-decoration: none;
+    font-family: sans-serif;
+    color: #8c1616;
+    // padding: 4px 4px;
+    // border-radius: 4px;
+}
+.wow-mode-alliance {
+    font-size: 1.5em;
+    font-weight: 700;
+    text-decoration: none;
+    font-family: sans-serif;
+    color: #162c57;
+    background-color: #e6cc80;
+    padding: 4px 8px;
+    border-radius: 4px;
 }

@@ -1,9 +1,9 @@
 import React from 'react'
 import TopBarComponent from './topbar'
-import WowHordeLogoComponent from './WowHordeLogo'
+import WowLogoComponent from './WowLogoComponent'
 import WowFactionComponent from './WowFactionComponent'
 import WowFilterContainer from './WowFilterContainer'
-import SearchContainer from './SearchContainer'
+import WowModeWrap from './WowModeWrap'
 import FilterContainer from './filter'
 import WowOperations from './WowOperations'
 import './style.scss'
@@ -104,11 +104,11 @@ export default function WowMode() {
       }
     },
     components: {
-      WowHordeLogo: WowHordeLogoComponent,
+      WowLogo: WowLogoComponent,
       TopbarWowMode: TopBarComponent,
       WowFaction: WowFactionComponent,
       WowFilterContainer: WowFilterContainer,
-      SearchContainer: SearchContainer,
+      WowModeWrap: WowModeWrap,
       WowOperations: WowOperations,
     },
     wrapComponents: {
@@ -117,10 +117,10 @@ export default function WowMode() {
         return <TopbarWowMode {...props} />
       },
       BaseLayout: (Ori) => (props) => {
-        const SearchContainer = props.getComponent('SearchContainer')
+        const WowModeWrap = props.getComponent('WowModeWrap')
         return (
           <div>
-            <SearchContainer {...props} />
+            <WowModeWrap {...props} />
             <Ori {...props} />
           </div>
         )

@@ -80,7 +80,7 @@ export default class Topbar extends React.Component {
 
       this.loadSpec(urls[targetIndex].url)
     }
-    // instantiate wowMode state
+    // instantiate wowMode state for topBar
     // note that this will be an issue if topbar is not rendered (different customization)
     // should probably create a (visible:hidden) component that renders alongside topBar to instantiate from
     this.props.wowModeActions.setFactionHorde()
@@ -95,7 +95,7 @@ export default class Topbar extends React.Component {
     let { getComponent, specSelectors, getConfigs } = this.props
     const Button = getComponent("Button")
     const Link = getComponent("Link")
-    const WowHordeLogo = getComponent("WowHordeLogo", true)
+    const WowLogo = getComponent("WowLogo", true)
     const WowFaction = getComponent("WowFaction", true)
 
     let isLoading = specSelectors.loadingStatus() === "loading"
@@ -108,6 +108,8 @@ export default class Topbar extends React.Component {
     const { urls } = getConfigs()
     let control = []
     let formOnSubmit = null
+    const { wowModeSelectors } = this.props
+    let isFactionHorde = wowModeSelectors.getIsFactionHorde()
 
     if(urls) {
       let rows = []
@@ -126,7 +128,14 @@ export default class Topbar extends React.Component {
     else {
       formOnSubmit = this.downloadUrl
       control.push(<input className="download-url-input" type="text" onChange={ this.onUrlChange } value={this.state.url} disabled={isLoading} style={inputStyle} />)
-      control.push(<Button className="download-url-button" onClick={ this.downloadUrl }>Lok'tar!</Button>)
+      let btnClassColor;
+      if (!isFactionHorde) {
+        btnClassColor = `download-url-button download-url-button-alliance`
+        control.push(<Button className={btnClassColor} onClick={ this.downloadUrl }>Well Met!</Button>)
+      } else {
+        btnClassColor = `download-url-button download-url-button-horde`
+        control.push(<Button className={btnClassColor} onClick={ this.downloadUrl }>Lok'tar!</Button>)
+      }
     }
 
     return (
@@ -134,7 +143,7 @@ export default class Topbar extends React.Component {
         <div className="wrapper">
           <div className="topbar-wrapper">
             <Link className="topbar-wowmode-text">
-              <WowHordeLogo />
+              <WowLogo />
               <span className="">WoWMode</span>
             </Link>
             <WowFaction />

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Component } from 'react'
 
-export default class SearchContainer extends Component {
+export default class WowModeWrap extends Component {
   componentDidMount() {
     const { layoutActions } = this.props
     // init the state.filter, so we can use (cloned) FilterContainer as-is

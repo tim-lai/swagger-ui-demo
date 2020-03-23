@@ -28,13 +28,13 @@ export default class WowFactionComponent extends Component {
     if (isFactionHorde) {
       return (
         <div className="wow-mode-horde">
-          <span onClick={()=> (this.toggleFaction())}>HORDE</span>
+          <span onClick={()=> (this.toggleFaction())}>Horde</span>
         </div>
       )
     }
     return (
       <div className="wow-mode-alliance">
-        <span onClick={()=> (this.toggleFaction())}>ALLIANCE</span>
+        <span onClick={()=> (this.toggleFaction())}>Alliance</span>
       </div>
     )
   }
