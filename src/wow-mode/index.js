@@ -4,6 +4,7 @@ import WowHordeLogoComponent from './WowHordeLogo'
 import WowFactionComponent from './WowFactionComponent'
 import WowFilterContainer from './WowFilterContainer'
 import SearchContainer from './SearchContainer'
+import FilterContainer from './filter'
 import './style.scss'
 
 
@@ -121,6 +122,10 @@ export default function WowMode() {
             <Ori {...props} />
           </div>
         )
+      },
+      FilterContainer: (Ori) => (props) => {
+        // expect return a wrapped container that will return null
+        return <FilterContainer {...props} />
       }
     }
   }
