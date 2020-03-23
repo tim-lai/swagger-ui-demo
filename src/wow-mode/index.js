@@ -5,6 +5,7 @@ import WowFactionComponent from './WowFactionComponent'
 import WowFilterContainer from './WowFilterContainer'
 import SearchContainer from './SearchContainer'
 import FilterContainer from './filter'
+import WowOperations from './WowOperations'
 import './style.scss'
 
 
@@ -108,6 +109,7 @@ export default function WowMode() {
       WowFaction: WowFactionComponent,
       WowFilterContainer: WowFilterContainer,
       SearchContainer: SearchContainer,
+      WowOperations: WowOperations,
     },
     wrapComponents: {
       Topbar: (Ori) => (props) => {
@@ -126,7 +128,12 @@ export default function WowMode() {
       FilterContainer: (Ori) => (props) => {
         // expect return a wrapped container that will return null
         return <FilterContainer {...props} />
-      }
+      },
+      operations: (Ori) => (props) => {
+        // note the (lack of) capitalization of the component we are wrapping
+        const WowOperations = props.getComponent('WowOperations', true)
+        return <WowOperations {...props} />
+      },
     }
   }
 }
