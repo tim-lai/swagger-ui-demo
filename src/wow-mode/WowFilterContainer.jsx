@@ -33,7 +33,7 @@ export default class WowFilterContainer extends React.Component {
         {filter === null || filter === false ? null :
           <div className="filter-container">
             <Col className="filter wrapper" mobile={12}>
-              <input className="operation-filter-input" placeholder="Filter by tag" type="text"
+              <input className="operation-filter-input" placeholder="Filter by tag, method, parameter (in path), summary, description, or operationId" type="text"
                      onChange={this.onFilterChange} value={filter === true || filter === "true" ? "" : filter}
                      disabled={isLoading} style={inputStyle}/>
             </Col>
