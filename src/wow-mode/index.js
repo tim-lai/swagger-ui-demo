@@ -23,16 +23,22 @@ export default function WowMode() {
           // this is a toggleword enable in topBar, to enable a "mode"
           updateUrl: (ori, system) => (url) => {
             if(url === 'wowmode') {
+              // console.log('set wow mode')
               url = system.specSelectors.url()
               system.wowModeActions.setEnabled()
             }
+            else if(url === 'swaggermode') {
+              // console.log('set swagger mode')
+              url = system.specSelectors.url()
+              system.wowModeActions.setDisabled()
+            }
             else if(url === 'hordemode') {
-              console.log('set horde')
+              // console.log('set horde mode')
               url = system.specSelectors.url()
               system.wowModeActions.setFactionHorde()
             }
             else if(url === 'alliancemode') {
-              console.log('set alliance')
+              // console.log('set alliance mode')
               url = system.specSelectors.url()
               system.wowModeActions.setFactionAlliance()
             }
@@ -41,7 +47,7 @@ export default function WowMode() {
           },
           // topbar url onSubmit, if toggleword, do not load a new api definition
           download: (ori, system) => (url) => {
-            if(url === 'wowmode' || url === 'hordemode' || url === 'alliancemode') {
+            if(url === 'wowmode' || url === 'swaggermode' || url === 'hordemode' || url === 'alliancemode') {
               return
             }
             ori(url)
@@ -58,6 +64,12 @@ export default function WowMode() {
             return {
               type: 'WOW_MODE_ENABLED',
               payload: !!enabled
+            }
+          },
+          setDisabled() {
+            return {
+              type: 'WOW_MODE_DISABLED',
+              payload: false
             }
           },
           toggleFaction(currentFactionIsHorde=true) {
@@ -89,6 +101,9 @@ export default function WowMode() {
         },
         reducers: {
           'WOW_MODE_ENABLED': (state, action) => {
+            return state.set('isEnabled', action.payload)
+          },
+          'WOW_MODE_DISABLED': (state, action) => {
             return state.set('isEnabled', action.payload)
           },
           'WOW_MODE_TOGGLE_IS_FACTION_HORDE': (state, action) => {
