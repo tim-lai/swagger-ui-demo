@@ -1,6 +1,40 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
+SwaggerUI features a powerful Plugin API that gives user the ability to customize and extend functionality and layout.  
 
-## Available Scripts
+[Live Demo](https://tim-lai.github.io/swagger-ui-demo/)  
+
+This demo provides examples of the following:
+- Custom Logo and Nav Bar
+- Custom Layout that moves the Filter Input Bar above the API definition
+- Use of state change to toggle the Custom Logo and Mode Text
+- Custom color scheme
+- Extended Filter functionality
+
+Specifically, from the SwaggerUI Plugin API, we:
+- wrapActions
+- wrapComponents
+- create custom actions, selectors, reducers
+
+## Guide
+
+This repo has step-by-step development branches to make it easier to follow progression.  
+
+**1-logo-and-colors** - Setup the initial plugin. Apply custom logo and colors  
+
+**2-toggleword-and-state** - Enable mode toggle via the TopBar. Setup Redux state in TopBar. Test via `console.log` or Redux Dev Tools (Chrome Extension)  
+
+**3-filter-container** - Display a cloned FilterContainer beneath the TopBar. Since we are using a cloned FilterContainer, we set it to always display via `layoutActions.updateFilter(true)`  
+
+**4-ops-filter** - New advanced filter function, along with a wrapped `Operations` component to call our `filterByOpsMethodAndOperation` instead of the default `fn.opsFilter`  
+
+**5-toggle-logo-with-state** - Visible UI changes when toggling state, a continuation from **2-toggleword-and-state**. Also, reorganize filenames for better consistency, though it might be a bit harder to follow with name changes.  
+
+
+## Getting Started
+
+Install dependencies:
+
+### `npm i`
 
 In the project directory, you can run:
 
@@ -12,57 +46,18 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Resources
 
-### `npm run build`
+[Swagger UI Plugin system overview](https://swagger.io/docs/open-source-tools/swagger-ui/customization/overview/)
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+[OpenAPI 3 (OA3) Specification](https://swagger.io/docs/specification/basic-structure/)
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+[OpenAPI 2 Specification, aka Swagger 2.0](https://swagger.io/docs/specification/2-0/basic-structure/)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## License
+This project is licensed under the MIT License.
