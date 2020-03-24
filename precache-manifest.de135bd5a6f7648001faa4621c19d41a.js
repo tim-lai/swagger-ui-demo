@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "2c282804cfcef68795c6f94090417625",
+    "revision": "7fba69d72b0ffc9a7b2951ef79ec0a1d",
     "url": "/swagger-ui-demo/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/swagger-ui-demo/static/css/2.677ef6f3.chunk.css"
   },
   {
-    "revision": "2f8c0af9c791ee90d249",
-    "url": "/swagger-ui-demo/static/css/main.36e7dac0.chunk.css"
+    "revision": "5a92abf2c7271e9046e4",
+    "url": "/swagger-ui-demo/static/css/main.799a2b51.chunk.css"
   },
   {
     "revision": "41ad1c801e86d0e0dcf7",
@@ -20,7 +20,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/swagger-ui-demo/static/js/2.ba6eb8c2.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "2f8c0af9c791ee90d249",
+    "revision": "5a92abf2c7271e9046e4",
     "url": "/swagger-ui-demo/static/js/main.36189415.chunk.js"
   },
   {

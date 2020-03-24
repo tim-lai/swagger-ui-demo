@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/swagger-ui-demo/precache-manifest.638f427e3204fca5a03bc67341ca6d48.js"
+  "/swagger-ui-demo/precache-manifest.de135bd5a6f7648001faa4621c19d41a.js"
 );
 
 self.addEventListener('message', (event) => {

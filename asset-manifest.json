@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/swagger-ui-demo/static/css/main.36e7dac0.chunk.css",
+    "main.css": "/swagger-ui-demo/static/css/main.799a2b51.chunk.css",
     "main.js": "/swagger-ui-demo/static/js/main.36189415.chunk.js",
     "main.js.map": "/swagger-ui-demo/static/js/main.36189415.chunk.js.map",
     "runtime-main.js": "/swagger-ui-demo/static/js/runtime-main.fb04ee9a.js",
@@ -9,10 +9,10 @@
     "static/js/2.ba6eb8c2.chunk.js": "/swagger-ui-demo/static/js/2.ba6eb8c2.chunk.js",
     "static/js/2.ba6eb8c2.chunk.js.map": "/swagger-ui-demo/static/js/2.ba6eb8c2.chunk.js.map",
     "index.html": "/swagger-ui-demo/index.html",
-    "precache-manifest.638f427e3204fca5a03bc67341ca6d48.js": "/swagger-ui-demo/precache-manifest.638f427e3204fca5a03bc67341ca6d48.js",
+    "precache-manifest.de135bd5a6f7648001faa4621c19d41a.js": "/swagger-ui-demo/precache-manifest.de135bd5a6f7648001faa4621c19d41a.js",
     "service-worker.js": "/swagger-ui-demo/service-worker.js",
     "static/css/2.677ef6f3.chunk.css.map": "/swagger-ui-demo/static/css/2.677ef6f3.chunk.css.map",
-    "static/css/main.36e7dac0.chunk.css.map": "/swagger-ui-demo/static/css/main.36e7dac0.chunk.css.map",
+    "static/css/main.799a2b51.chunk.css.map": "/swagger-ui-demo/static/css/main.799a2b51.chunk.css.map",
     "static/js/2.ba6eb8c2.chunk.js.LICENSE.txt": "/swagger-ui-demo/static/js/2.ba6eb8c2.chunk.js.LICENSE.txt",
     "static/media/wow-alliance-logo.png": "/swagger-ui-demo/static/media/wow-alliance-logo.225610e7.png"
   },
@@ -20,7 +20,7 @@
     "static/js/runtime-main.fb04ee9a.js",
     "static/css/2.677ef6f3.chunk.css",
     "static/js/2.ba6eb8c2.chunk.js",
-    "static/css/main.36e7dac0.chunk.css",
+    "static/css/main.799a2b51.chunk.css",
     "static/js/main.36189415.chunk.js"
   ]
 }
