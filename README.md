@@ -46,6 +46,13 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
 
+### Hooks
+Toggle keywords can be used in place of changing the location of the API definition. Use of a toggle keyword will change state without reloading the API definition. While the toggle keywords are tied to working Redux state, they are not feature complete yet.  
+
+Example toggle keywords with a visual change: `hordemode` and `alliancemode` can be used to toggle the faction state, instead of clicking on the faction state text.  
+
+Incomplete toggle keywords: `wowmode`, `swaggermode`  
+
 
 ## Resources
 
