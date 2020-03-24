@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "884b4a1824b18416c7e89a8693d0bfbc",
+    "revision": "2c282804cfcef68795c6f94090417625",
     "url": "/swagger-ui-demo/index.html"
   },
   {
